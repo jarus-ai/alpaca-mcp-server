@@ -185,7 +185,8 @@ log_level = "ERROR" if is_pycharm else "INFO"
 log_level = "DEBUG" if DEBUG.lower() == "true" else log_level
 
 # Initialize FastMCP server
-mcp = FastMCP("alpaca-trading", log_level=log_level)
+# NEW CODE FOR HOST ACCESS
+mcp = FastMCP("alpaca-trading", log_level=log_level, allowed_hosts=["*"])
 
 # Convert string to boolean
 ALPACA_PAPER_TRADE_BOOL = ALPACA_PAPER_TRADE.lower() not in ['false', '0', 'no', 'off']
