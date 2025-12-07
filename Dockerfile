@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir .
 
 # Run the MCP server using the CLI entry point
-CMD ["alpaca-mcp-server", "serve", "--transport", "http", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["alpaca-mcp-server", "serve", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "8000"]
